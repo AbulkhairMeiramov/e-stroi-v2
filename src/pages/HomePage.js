@@ -1,6 +1,6 @@
 import { Container } from "@mui/system";
-import { CategoryModule } from "../components/CategoryModule";
-import { ProductModule } from "../components/ProductModule";
+import { CategoryModule } from "../components/Iteration2/CategoryModule";
+import { ProductModule } from "../components/Iteration2/ProductModule";
 
 export const HomePage = () => {
   return (

@@ -2,7 +2,7 @@ import TreeView from "@mui/lab/TreeView";
 import TreeItem from "@mui/lab/TreeItem";
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback, useEffect } from "react";
-import { loadCategories } from "../store/actions/loadCategories";
+import { loadCategories } from "../../store/actions/loadCategories";
 import { Divider } from "@mui/material";
 
 export const CategoryList = () => {

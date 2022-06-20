@@ -6,7 +6,7 @@ import { Divider } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback, useEffect } from "react";
-import { loadCategories } from "../store/actions/loadCategories";
+import { loadCategories } from "../../store/actions/loadCategories";
 
 export const CategoryModule = () => {
   const dispatch = useDispatch();

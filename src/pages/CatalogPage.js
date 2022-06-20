@@ -1,6 +1,6 @@
 import { Container } from "@mui/system";
-import { CategoryList } from "../components/CategoryList";
-import { SubCategoryGrid } from "../components/SubCategoryGrid";
+import { CategoryList } from "../components/Iteration3/CategoryList";
+import { SubCategoryGrid } from "../components/Iteration3/SubCategoryGrid";
 
 export const CatalogPage = () => {
   return (

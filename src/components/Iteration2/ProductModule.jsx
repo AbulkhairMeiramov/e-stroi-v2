@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ProductItem } from "./ProductItem";
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback, useEffect, useMemo } from "react";
-import { loadProducts } from "../store/actions/loadProducts";
+import { loadProducts } from "../../store/actions/loadProducts";
 
 const findNode = (id, category) => {
   if (category?.id + "" === id + "") {

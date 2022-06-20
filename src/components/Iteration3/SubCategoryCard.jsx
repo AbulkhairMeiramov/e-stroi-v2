@@ -9,7 +9,7 @@ export const SubCategoryCard = ({ categoryItem }) => {
           maxWidth: "314px",
           height: "183px",
           display: "flex",
-          background: "#EAEAEA",
+          background: "#EAEAEA"
         }}
       >
         <CardActionArea>

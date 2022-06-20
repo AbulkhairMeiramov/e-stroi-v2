@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import { SubCategoryCard } from "./SubCategoryCard";
 import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loadCategories } from "../store/actions/loadCategories";
+import { loadCategories } from "../../store/actions/loadCategories";
 
 export const SubCategoryGrid = () => {
   const dispatch = useDispatch();

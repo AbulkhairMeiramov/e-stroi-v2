@@ -1,4 +1,5 @@
 import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { SubCategoryItem } from "./SubCategoryItem";
 
 export const SubCategoryCard = ({ categoryItem }) => {
@@ -10,6 +11,8 @@ export const SubCategoryCard = ({ categoryItem }) => {
           height: "230px",
           display: "flex",
           background: "#EAEAEA",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <CardActionArea>
@@ -28,7 +31,12 @@ export const SubCategoryCard = ({ categoryItem }) => {
                 categoryItem.childCategories
                   .slice(0, 3)
                   .map((childCategoryItem) => (
-                    <SubCategoryItem childCategory={childCategoryItem} />
+                    <Link
+                      to={`/catalog?categoryId=${childCategoryItem.id}`}
+                      style={{ color: "inherit", textDecoration: "inherit" }}
+                    >
+                      <SubCategoryItem childCategory={childCategoryItem} />
+                    </Link>
                   ))}
             </Typography>
           </CardContent>

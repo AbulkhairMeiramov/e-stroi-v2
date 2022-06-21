@@ -3,6 +3,7 @@ import TreeItem from "@mui/lab/TreeItem";
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback, useEffect } from "react";
 import { loadCategories } from "../../store/actions/loadCategories";
+import { Link } from "react-router-dom";
 import { Divider } from "@mui/material";
 
 export const CategoryList = () => {
@@ -25,46 +26,51 @@ export const CategoryList = () => {
       >
         {category.map((categoryItem) => (
           <>
-            <TreeItem
-              nodeId={categoryItem.id + ""}
-              label={
-                <div
-                  style={{
-                    display: "flex",
-                    width: "240px",
-                    height: "40px",
-                    alignItems: "center",
-                  }}
-                >
-                  <span
-                    style={{
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "#5E6366",
-                    }}
-                  >
-                    {categoryItem.name}
-                  </span>
+            <Link
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              to={`/catalog?categoryId=${categoryItem.id}`}
+            >
+              <TreeItem
+                nodeId={categoryItem.id + ""}
+                label={
                   <div
                     style={{
-                      marginLeft: "auto",
-                      background: "#ABABAB",
-                      borderRadius: "16px",
-                      width: "24px",
-                      height: "24px",
-                      justifyContent: "center",
-                      padding: "5px",
                       display: "flex",
-                      color: "#000000",
+                      width: "240px",
+                      height: "40px",
+                      alignItems: "center",
                     }}
                   >
-                    {categoryItem.childCount}
+                    <span
+                      style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        color: "#5E6366",
+                      }}
+                    >
+                      {categoryItem.name}
+                    </span>
+                    <div
+                      style={{
+                        marginLeft: "auto",
+                        background: "#ABABAB",
+                        borderRadius: "16px",
+                        width: "24px",
+                        height: "24px",
+                        justifyContent: "center",
+                        padding: "5px",
+                        display: "flex",
+                        color: "#000000",
+                      }}
+                    >
+                      {categoryItem.childCount}
+                    </div>
                   </div>
-                </div>
-              }
-              key={categoryItem.id}
-            />
-            <Divider style={{ width: "100%" }} />
+                }
+                key={categoryItem.id}
+              />
+              <Divider style={{ width: "100%" }} />
+            </Link>
           </>
         ))}
       </TreeView>

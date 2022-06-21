@@ -7,9 +7,9 @@ export const SubCategoryCard = ({ categoryItem }) => {
       <Card
         sx={{
           maxWidth: "314px",
-          height: "183px",
+          height: "230px",
           display: "flex",
-          background: "#EAEAEA"
+          background: "#EAEAEA",
         }}
       >
         <CardActionArea>
@@ -23,9 +23,13 @@ export const SubCategoryCard = ({ categoryItem }) => {
               }}
             >
               {categoryItem.name}
-              {categoryItem && categoryItem.childCategories && categoryItem.childCategories.map(childCategoryItem => (
-                <SubCategoryItem childCategory={childCategoryItem} />
-              ))}
+              {categoryItem &&
+                categoryItem.childCategories &&
+                categoryItem.childCategories
+                  .slice(0, 3)
+                  .map((childCategoryItem) => (
+                    <SubCategoryItem childCategory={childCategoryItem} />
+                  ))}
             </Typography>
           </CardContent>
         </CardActionArea>

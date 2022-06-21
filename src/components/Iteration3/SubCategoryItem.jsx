@@ -8,8 +8,12 @@ export const SubCategoryItem = ({ childCategory }) => {
         justifyContent: "center",
         borderRadius: "4px",
         background: "white",
-        width: "294px",
-        height: "28px",
+        width: "250px",
+        height: "40px",
+        marginBottom: "10px",
+        marginTop: "10px",
+        alignItems: "center",
+        padding: '5px'
       }}
     >
       <Typography>{childCategory.name}</Typography>
@@ -18,15 +22,16 @@ export const SubCategoryItem = ({ childCategory }) => {
           marginLeft: "auto",
           background: "#ABABAB",
           borderRadius: "16px",
-          width: "24px",
-          height: "24px",
+          width: "18px",
+          height: "18px",
           justifyContent: "center",
+          alignItems: "center",
           padding: "5px",
           display: "flex",
           color: "#000000",
         }}
       >
-        {childCategory.count}
+        {childCategory.childCount}
       </Typography>
     </div>
   );

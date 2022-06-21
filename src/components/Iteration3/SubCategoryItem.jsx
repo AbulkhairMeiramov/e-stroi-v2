@@ -13,10 +13,10 @@ export const SubCategoryItem = ({ childCategory }) => {
         marginBottom: "10px",
         marginTop: "10px",
         alignItems: "center",
-        padding: '5px'
+        padding: "5px",
       }}
     >
-      <Typography>{childCategory.name}</Typography>
+      <Typography style={{width: '85%'}}>{childCategory.name}</Typography>
       <Typography
         style={{
           marginLeft: "auto",
